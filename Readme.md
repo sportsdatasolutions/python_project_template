@@ -51,10 +51,12 @@ fi
 
 #### ```Running```
 
-> To run the script simply ***open and run*** the ```sample_notebook.ipynb``` file within Deepnote. If not in Deepnote, make sure you have ```jupyter``` installed first:
+> To run the script simply ***open and run*** the ```sample_notebook.ipynb``` file ***within Deepnote***. If running locally, make sure you have ```jupyter``` installed first, then use ```pipenv``` to open the ```jupyter``` console:
 
 ```bash
 $ pipenv run jupyter notebook sample_notebook.ipynb
+# or
+$ pipenv run jupyter notebook .
 ```
 
 #### ```Contributing```
