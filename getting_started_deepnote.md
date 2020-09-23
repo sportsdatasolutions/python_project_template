@@ -28,7 +28,7 @@
 
 ##### 4. ***Click*** the **Link Github Repository** button.
 
-##### **Note**: By **default** Deepnote will **clone** the project into a new ***folder***. We ***reccommend*** keeping it this way, placing any project files within the version controlled directory (this will now be the root of your project, it will contain a ```.git``` folder and your Readme + Gitignore). If you have any ***existing*** files or folders that you'd like to add to the version controlled project, simply drag and drop them into the project root.
+##### **Note**: By **default** Deepnote will **clone** the project into a new ***folder***. If you have any ***existing*** files or folders that you'd like to add to the version controlled project, simply drag and drop them into the project folder. **Alternatively**, you can work from the Deepnote project root by simply dragging everything (including ```.git``` folder) out of the 'project folder' and deleting the empty project folder.
 
 ## Terminal
 > Setting up a Terminal (CLI) for our Project
@@ -42,7 +42,7 @@
 ##### 4. Now we can use this **Terminal** as we would ***locally***. The ***prompt*** will read ```jovyan@deepnote:~/work```:
 
 ```bash
-$ cd python_project_template
+$ cd python_project_template    # if working within project folder
 $ ls -al
 $ git status
 ```
@@ -81,24 +81,47 @@ $ git status
 
 ###
 
-**Note**: Handling Python project dependencies locally is ***almost*** the same on Deepnote. Only difference is that Deepnote already has it's own dependencies pre-installed. It's good practice to track the dependencies of our projects ourselves (so our projects can be used outside of Deepnote). The [Documentation](https://docs.deepnote.com/environment/python-requirements) suggests using ```pip``` and a ```requirements.txt``` file (which you are free to do), however we can also use ```pipenv```. For this we'll need to create our own code in ```init.ipynb``` to deal with ```pipenv``` and ```Pipfile``` instead of ```pip``` and ```requirements.txt```. **Follow steps below to use ```pipenv``` to manage dependencies**.
+**Note**: Handling Python project dependencies locally is ***almost*** the same on Deepnote. Only difference is that Deepnote already has it's own dependencies pre-installed. It's good practice to track the dependencies of our projects ourselves (so our projects can be used outside of Deepnote). The [Documentation](https://docs.deepnote.com/environment/python-requirements) suggests using ```pip``` and a ```requirements.txt``` file (which you are free to do), however we can also use ```pipenv```. To do this we'll need to replace some code in ```init.ipynb``` to deal with ```pipenv``` and ```Pipfile``` instead of ```pip``` and ```requirements.txt```. **Follow steps below to use ```pipenv``` to manage dependencies**.
 
-##### Simply Customise Deepnote ```init.ipynb``` to install ```pipenv``` and project dependencies in ```Pipfile```. You'll already see the code block for ```pip``` and ```requirements.txt``` there. We can just **replace this code block** with ours (which will also deal with deleting ```jupyter``` or ```jedi``` packages from Pipfile):
+##### 1. Simply customise ```init.ipynb``` file (Environment Tab) to install ```pipenv``` and project dependencies in ```Pipfile```. You'll already see the code cell for ```pip``` and ```requirements.txt``` there. We can just **replace the code in this code cell with ours** (which will also deal with deleting ```jupyter``` or ```jedi``` packages from Pipfile):
 
 ```bash
 %%bash
+# Make sure we change into the project directory, if this project is in the root directory comment out the line below.
+cd project_folder # Change project_folder to your actual project folder name!
 # If your project has a 'Pipfile' file, we'll install it here apart from blacklisted packages that interfere with Deepnote (see above).
-if test -f */Pipfile
-  echo "There's a Pipfile! Looks like there's something to install."
+if test -f Pipfile
   then
-    sed -i '/jedi/d;/jupyter/d;' */Pipfile
+    sed -i '/jedi/d;/jupyter/d;' Pipfile
     pip install pipenv
     pipenv install
-  else echo "There's no Pipfile, so nothing to install. This is the case with most projects."
+  else 
+    pip install pipenv
+    pipenv install
 fi
 ```
 
-**Do This**: You can now ***install*** all other possible dependecies you may need for your project via the **Terminal** e.g. ```pipenv install pandas```. If you restart your machine, deepnote will run the ```init.ipynb``` file to install all you're project dependencies automatically via ```pipenv```.
+##### 2. **Run** the the ***code cell*** or **restart** the ***machine***. The bash script will firstly change directory into your project folder and check if there is a ```Pipfile```. If there is one, it will remove blacklisted packages, install ```pipenv```, and run ```pipenv install```. If not, it will install ```pipenv``` and run ```pipenv install``` to initialise a ```Pipfile``` and ```Pipfile.lock```.
+
+**Note**: If you ***don't*** want to work out of a ***project folder** within Deepnote, you can simply ***drag*** all the files and folders (including ```.git``` folder) into the root of your Deepnote project, and delete the empty project folder. In the ```init.ipynb``` file, simply **comment out** the line that ```cd```s into the 'project folder'. At the same time, as you're now operating in the Deepnote project root, you'll want to ***add*** **```.deepnote```**  and **```init.ipynb```** to your **```.gitignore```** file. e.g.
+
+```
+# ignore deepnote files
+.deepnote
+init.ipynb
+```
+
+**Do This**: You can now ***install*** all other possible dependecies you may need for your project via the **Terminal** e.g. 
+
+  ```bash
+  # if working out of project folder
+  $ cd project_folder
+  $ pipenv install pandas
+  # if working from Deepnote root
+  $ pipenv install pandas
+  ``` 
+
+  If you **restart** your ***machine*** (Environment Tab), Deepnote will run the ```init.ipynb``` file to install all you're project dependencies automatically via ```pipenv```.
 
 **Note**: **As per the warning in ```init.py``` do not install the packages ```jedi``` or ```jupyter```**. If you are using ```.ipynb``` files however, make sure you make ***note*** ```jupyter``` down as a project dependency on your project **Readme**.
 
@@ -106,7 +129,7 @@ fi
 
 > Sample Project to Test Dependency Management. The script will use Pandas to fetch and parse HTML tables from Power10 website and output the number of tables found.
 
-##### 1. As we know we're using Pandas, so install ```pandas``` via ```pipenv```. Open Terminal: 
+##### 1. As we know we're using Pandas, so install ```pandas``` via ```pipenv```. Open Terminal, ``cd`` into project folder if working within one: 
 
 ```bash
 $ pipenv install pandas
