@@ -10,6 +10,18 @@
 
 **Note**: To **run** code in [```sample_notebook.ipynb```](./sample_notebook.ipynb), **fork** this repo first. You can then **clone** it **locally (via CLI)** or **clone** it into a **Deepnote Project (via Git Services Tab)**. **Once cloned, follow the instructions below**. 
 
+#### ```User Story```
+
+> The script is in the form of an interactive Python notebook. Please see ```sample_notebook.ipynb```.
+
++ This script reads and parses CSV data from URL (via pandas),
++ filters out athletes representing ```Australia```,
++ and displays the filtered dataframe.
++ The Script then reads and parses in JSON data from URL (same data),
++ filters out athletes representing ```Great Britain```,
++ and finally writes the filtered dataframe into two new files,
++ one with the data parsed as CSV, and the other parsed as JSON.
+
 #### ```Dependencies```
 
 > **If cloned locally**, install dependencies in ```Pipfile``` + ```jupyter```. See [this guide](https://realpython.com/pipenv-guide/) for help on ```pipenv``` (if not familiar) e.g.
@@ -27,8 +39,8 @@ $ pipenv install jupyter
 
 ```bash
 %%bash
-# Make sure we change into the project directory, if this project is in the root directory comment out the line below.
-cd project_folder # Change project_folder to your actual project folder name!
+# Make sure we change into the project directory, if you have placed your project in the deepnote root directory comment out the line below.
+cd python_project_template
 # If your project has a 'Pipfile' file, we'll install it here apart from blacklisted packages that interfere with Deepnote (see above).
 if test -f Pipfile
   then
@@ -38,18 +50,6 @@ if test -f Pipfile
   else echo "There's no Pipfile, so nothing to install. This is the case with most projects."
 fi
 ```
-
-#### ```User Story```
-
-> The script is in the form of an interactive Python notebook. Please see ```sample_notebook.ipynb```.
-
-+ This script reads and parses CSV data from URL (via pandas),
-+ filters out athletes representing ```Australia```,
-+ and displays the filtered dataframe.
-+ The Script then reads and parses in JSON data from URL (same data),
-+ filters out athletes representing ```Great Britain```,
-+ and finally writes the filtered dataframe into two new files,
-+ one with the data parsed as CSV, and the other parsed as JSON.
 
 #### ```Running```
 
