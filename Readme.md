@@ -6,9 +6,9 @@
 
 > See [```getting_started_local.ipynb```](./getting_started_local.ipynb) and [```getting_started_deepnote.ipynb```](./getting_started_deepnote.ipynb).
 
-For **learning purposes**, ***recreate*** these project setup templates for yourself. ***Customise*** it to have it make sense to you, so every time you start a new project (either locally or on Deepnote) you can ***quickly refer*** to this template of yours on Github! 
+**Note**: For **learning purposes**, ***recreate*** these project setup templates for yourself. ***Customise*** it to have it make sense to you, so every time you start a new project (either locally or on Deepnote) you can ***quickly refer*** to this template of yours on Github! 
 
-To just **run** the [```sample_notebook.ipynb```](./sample_notebook.ipynb) instead, **fork** this repo, **clone** it **locally (via CLI)**, or, **clone** it into a **Deepnote Project (via Git Services Tab)**, then, follow the instructions below. 
+**Note**: To **run** code in [```sample_notebook.ipynb```](./sample_notebook.ipynb), **fork** this repo first. You can then **clone** it **locally (via CLI)** or **clone** it into a **Deepnote Project (via Git Services Tab)**. **Once cloned, follow the instructions below**. 
 
 #### ```Dependencies```
 
