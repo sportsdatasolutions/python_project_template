@@ -4,7 +4,7 @@
 
 ### Getting Started
 
-> See [```getting_started_local.ipynb```](./getting_started_local.ipynb) and [```getting_started_deepnote.ipynb```](./getting_started_deepnote.ipynb).
+> See [```getting_started_local```](./getting_started_local.md) and [```getting_started_deepnote```](./getting_started_deepnote.md). If in Deepnote, ```.ipynb``` version avaliable.
 
 **Note**: For **learning purposes**, ***recreate*** these project setup templates for yourself. ***Customise*** it to have it make sense to you, so every time you start a new project (either locally or on Deepnote) you can ***quickly refer*** to this template of yours on Github! 
 
