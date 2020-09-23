@@ -28,9 +28,10 @@ $ pipenv install jupyter
 ```bash
 %%bash
 # If your project has a 'Pipfile' file, we'll install it here apart from blacklisted packages that interfere with Deepnote (see above).
-if test -f Pipfile
+if test -f */Pipfile
+  echo "There's a Pipfile! Looks like there's something to install."
   then
-    sed -i '/jedi/d;/jupyter/d;' ./Pipfile
+    sed -i '/jedi/d;/jupyter/d;' */Pipfile
     pip install pipenv
     pipenv install
   else echo "There's no Pipfile, so nothing to install. This is the case with most projects."

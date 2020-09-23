@@ -81,45 +81,24 @@ $ git status
 
 ###
 
-**Note**: Handling Python project dependencies locally is ***almost*** the same on Deepnote. Deepnote already has it's own dependencies pre-installed but it's good practice to track the dependencies of our own projects ourselves (so our projects can be used outside of Deepnote). The [Documentation](https://docs.deepnote.com/environment/python-requirements) suggests using ```pip``` and a ```requirements.txt``` file (which you are free to do), however we can also use ```pipenv```. For this we'll need to create our own code in ```init.ipynb``` to deal with ```pipenv``` and ```Pipfile``` instead of ```pip``` and ```requirements.txt```. **Follow steps below to use ```pipenv``` to manage dependencies**.
+**Note**: Handling Python project dependencies locally is ***almost*** the same on Deepnote. Only difference is that Deepnote already has it's own dependencies pre-installed. It's good practice to track the dependencies of our projects ourselves (so our projects can be used outside of Deepnote). The [Documentation](https://docs.deepnote.com/environment/python-requirements) suggests using ```pip``` and a ```requirements.txt``` file (which you are free to do), however we can also use ```pipenv```. For this we'll need to create our own code in ```init.ipynb``` to deal with ```pipenv``` and ```Pipfile``` instead of ```pip``` and ```requirements.txt```. **Follow steps below to use ```pipenv``` to manage dependencies**.
 
-##### 1. On Open Terminal and install ```pipenv``` with ```pip```
-
-```bash
-$ pip install pipenv
-```
-
-##### 2. Run ```pipenv install```
-
-```
-$ pipenv install
-Courtesy Notice: Pipenv found itself running within a virtual environment, so it will automatically use that environment, instead of creating its own for any project. You can set PIPENV_IGNORE_VIRTUALENVS=1 to force pipenv to ignore that environment and create its own instead. You can set PIPENV_VERBOSITY=-1 to suppress this warning.
-Creating a Pipfile for this project…
-Pipfile.lock not found, creating…
-Locking [dev-packages] dependencies…
-Locking [packages] dependencies…
-Updated Pipfile.lock (a65489)!
-Installing dependencies from Pipfile.lock (a65489)…
-  🐍   ▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉ 0/0 — 00:00:00
-```
-
-**Note**: ```pipenv``` identifies that you are already working within a virtual environment (as you would locally with ```pipenv```). So simply creates a ```Pipfile``` and ```Pipfile.lock``` without initialising another virtual environment.
-
-##### 3. Customise Deepnote ```init.ipynb``` to install ```pipenv``` and project dependencies in ```Pipfile```. You'll already see the code block for ```pip``` and ```requirements.txt``` there. We can just **replace this code block** with ours (which will also deal with deleting ```jupyter``` or ```jedi``` packages from Pipfile):
+##### Simply Customise Deepnote ```init.ipynb``` to install ```pipenv``` and project dependencies in ```Pipfile```. You'll already see the code block for ```pip``` and ```requirements.txt``` there. We can just **replace this code block** with ours (which will also deal with deleting ```jupyter``` or ```jedi``` packages from Pipfile):
 
 ```bash
 %%bash
 # If your project has a 'Pipfile' file, we'll install it here apart from blacklisted packages that interfere with Deepnote (see above).
-if test -f Pipfile
+if test -f */Pipfile
+  echo "There's a Pipfile! Looks like there's something to install."
   then
-    sed -i '/jedi/d;/jupyter/d;' ./Pipfile
+    sed -i '/jedi/d;/jupyter/d;' */Pipfile
     pip install pipenv
     pipenv install
   else echo "There's no Pipfile, so nothing to install. This is the case with most projects."
 fi
 ```
 
-**Note**: You can now ***install*** all other possible dependecies you may need for your project via the **Terminal** e.g. ```pipenv install pandas```. If you restart your machine, deepnote will run the ```init.ipynb``` file to install all you're project dependencies automatically via ```pipenv```.
+**Do This**: You can now ***install*** all other possible dependecies you may need for your project via the **Terminal** e.g. ```pipenv install pandas```. If you restart your machine, deepnote will run the ```init.ipynb``` file to install all you're project dependencies automatically via ```pipenv```.
 
 **Note**: **As per the warning in ```init.py``` do not install the packages ```jedi``` or ```jupyter```**. If you are using ```.ipynb``` files however, make sure you make ***note*** ```jupyter``` down as a project dependency on your project **Readme**.
 
