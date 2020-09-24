@@ -63,5 +63,5 @@ $ pipenv run jupyter notebook .
 
 #### ```Contributing```
 
-> See ```contributing.md``` (or simply place your own version of instructions below)
+> See [```contributing.md```](./contributing.md)
 
