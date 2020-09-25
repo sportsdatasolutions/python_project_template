@@ -20,7 +20,7 @@
 + and finally writes the filtered dataframe into two new files,
 + one with the data parsed as CSV, and the other parsed as JSON.
 
-**Note**: To **run** code in the sample notebook, ***recreate*** this project, or ***fork*** this repo. You can then **clone** your own ***fork**& **locally (via CLI)** or **clone** it into a **Deepnote Project (via Git Services Tab)**. **Once cloned, follow the instructions below**. 
+**Note**: To **run** code in the sample notebook, ***recreate*** this project, or ***fork*** this repo. You can then **clone** your own ***fork** **locally (via CLI)** or **clone** it into a **Deepnote Project (via Git Services Tab)**. **Once cloned, follow the instructions below**. 
 
 #### ```Dependencies```
 
