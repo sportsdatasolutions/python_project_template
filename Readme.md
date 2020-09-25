@@ -14,7 +14,7 @@ This setup guide inspired our [Python Project Template](https://github.com/sport
 
 > The sample program is in the form of an ***interactive Python notebook***. The ***data*** used in the notebook is a list of ***Seasons Best from the 2017/18 Swimming Season***.
 
-n+ This notebook reads and parses CSV data from URL (via pandas),
++ This notebook reads and parses CSV data from URL (via pandas),
 + filters out athletes representing ```Australia```,
 + and displays the filtered dataframe.
 + The notebook then reads and parses in JSON data from URL (same data),
