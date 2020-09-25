@@ -50,7 +50,7 @@ $ git status
 
 #### ```Contributing```
 
-> Instructions for contributing to the porject.
+> Instructions for contributing to the project.
 ```
 
 ## Dependencies

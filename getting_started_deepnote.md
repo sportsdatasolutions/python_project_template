@@ -28,7 +28,7 @@
 
 ##### 4. ***Click*** the **Link Github Repository** button.
 
-##### **Note**: By **default** Deepnote will **clone** the project into a new ***folder***. If you have any ***existing*** files or folders that you'd like to add to the version controlled project, simply drag and drop them into the project folder. **Alternatively**, you can work from the Deepnote project root by simply dragging everything (including ```.git``` folder) out of the 'project folder' and deleting the empty project folder.
+**Note**: By **default** Deepnote will **clone** the project into a new ***folder***. If you have any ***existing*** files or folders that you'd like to add to the version controlled project, simply drag and drop them into the project folder. **Alternatively**, you can work from the Deepnote project root by simply dragging everything (including ```.git``` folder) out of the 'project folder' and deleting the empty project folder. Note, more about this coming in Dependencies section.
 
 ## Terminal
 > Setting up a Terminal (CLI) for our Project
@@ -73,7 +73,7 @@ $ git status
 
 #### ```Contributing```
 
-> Instructions for contributing to the porject.
+> Instructions for contributing to the project.
 ```
 
 ## Dependencies
@@ -103,10 +103,10 @@ fi
 
 ##### 2. **Run** the the ***code cell*** or **restart** the ***machine***. The bash script will firstly change directory into your project folder and check if there is a ```Pipfile```. If there is one, it will remove blacklisted packages, install ```pipenv```, and run ```pipenv install```. If not, it will install ```pipenv``` and run ```pipenv install``` to initialise a ```Pipfile``` and ```Pipfile.lock```.
 
-**Note**: If you ***don't*** want to work out of a ***project folder** within Deepnote, you can simply ***drag*** all the files and folders (including ```.git``` folder) into the root of your Deepnote project, and delete the empty project folder. In the ```init.ipynb``` file, simply **comment out** the line that ```cd```s into the 'project folder'. At the same time, as you're now operating in the Deepnote project root, you'll want to ***add*** **```.deepnote```**  and **```init.ipynb```** to your **```.gitignore```** file. e.g.
+**Note**: If you ***don't*** want to work out of a ***project folder** within Deepnote, you can simply ***drag*** all the files and folders (including ```.git``` folder) into the root of your Deepnote project, and delete the empty project folder. In the ```init.ipynb``` file, simply **comment out** the line that ```cd```s into the 'project folder'. At the same time, as you're now operating in the Deepnote project root, you'll want to **add ```.deepnote``` and ```init.ipynb```** to your **```.gitignore```** file. e.g.
 
 ```
-# ignore deepnote files
+# ignore deepnote stuff (if working in deepnote project root)
 .deepnote
 init.ipynb
 ```
