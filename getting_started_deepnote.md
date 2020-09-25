@@ -65,7 +65,7 @@ $ git status
 
 #### ```Dependencies```
 
-> Instructions for installing project dependencies, see this projects [Readme](./Readme.md) for a good template.
+> Instructions for installing project dependencies , see this projects [Readme](./Readme.md) for a good template.
 
 #### ```Running```
 
@@ -77,7 +77,7 @@ $ git status
 ```
 
 ## Dependencies
-> Dealing with project dependencies on Deepnote
+> Dealing with project dependencies (packages the project will depend on) on Deepnote
 
 ###
 

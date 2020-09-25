@@ -42,7 +42,7 @@ $ git status
 
 #### ```Dependencies```
 
-> Instructions for installing project dependencies, see this projects [Readme](./Readme.md) for a good template.
+> Instructions for installing project dependencies (packages the project will depend on), see this projects [Readme](./Readme.md) for a good template.
 
 #### ```Running```
 
@@ -54,7 +54,7 @@ $ git status
 ```
 
 ## Dependencies
-> Dealing with project dependencies locally (so they can work well in any virtual/local environment)
+> Dealing with project dependencies (packages the project will depend on)
 
 ###
 
@@ -80,7 +80,7 @@ Installing dependencies from Pipfile.lock (a6xxxx)…
   🐍   ▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉ 0/0 — 00:00:00
 ```
 
-**Note**: You can now ***install*** all other possible dependecies you may need for your project via the **CLI** e.g. ```pipenv install jupyter pandas```.
+**Note**: You can now ***install*** all other possible packages you may need for your project via the **CLI** e.g. ```pipenv install jupyter pandas```.
 
 ## Sample Python Program
 

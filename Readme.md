@@ -24,12 +24,12 @@ This setup guide inspired our [Python Project Template](https://github.com/sport
 
 #### ```Dependencies```
 
-> **If cloned locally**, install dependencies ```jupyter``` + ```pandas```. See [this guide](https://realpython.com/pipenv-guide/) for help on ```pipenv``` (if not familiar) e.g.
+> **If cloned locally**, install dependencies (packages the project will depend on) ```jupyter``` + ```pandas```. See [this guide](https://realpython.com/pipenv-guide/) for help on ```pipenv``` (if not familiar) e.g.
 
 ```bash
 # Install pipenv (if not already)
 $ pip install pipenv
-# Install dependencies with pipenv
+# Install packages with pipenv
 $ pipenv install jupyter pandas
 ```
 
