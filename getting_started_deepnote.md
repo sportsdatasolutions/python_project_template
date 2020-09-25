@@ -157,6 +157,20 @@ $ pipenv install lxml
 
 **Note**: Remove dependencies with ```pipenv uninstall``` e.g. ```pipenv uninstall lxml```.
 
+## Customisation (Deepnote)
+> Customise your Deepnote experience with ```init.ipynb``` e.g. in another code cell below your dependencies code cell
+
+#### Git Alliases
+
+```bash
+%%bash
+git config --global alias.st status
+git config --global alias.ci commit
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+```
+
 ## 3rd Party Integrations (Deepnote)
 
 > Use the code in [```sample_notebook.ipynb```](./sample_notebook.ipynb) (type it all out, don't copy paste over :P) to test out Deepnote integrations (see Integrations Tab on Deepnote Project).

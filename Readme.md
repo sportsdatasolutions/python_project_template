@@ -1,26 +1,26 @@
 ## Python Project Template
 
-> Setup Template for Python Projects in [Deepnote](https://deepnote.com/) (or Locally)
+> Setup Template for Python Projects in [Deepnote](https://deepnote.com/) or Locally
 
 ### Getting Started
 
-> See [```getting_started_local```](./getting_started_local.md) and [```getting_started_deepnote```](./getting_started_deepnote.md). If viewing this in [Deepnote](https://deepnote.com/), see ```.ipynb``` versions.
+> See [```getting_started_local```](./getting_started_local.md) and [```getting_started_deepnote```](./getting_started_deepnote.md). Feel free to view this in [Deepnote](https://deepnote.com/project/38ed87ae-207f-4a03-bfc1-5204106200d5), see ```.ipynb``` versions.
 
-**Note**: For **learning purposes**, ***recreate*** these project setup templates for yourself. ***Customise*** it to have it make sense to you, so every time you start a new project (either locally or on Deepnote) you can ***quickly refer*** to this template of yours on Github! 
+This setup guide inspired our [Python Project Template](https://github.com/sportsdatasolutions/python_project). If you are coming from there, have a read of our ***getting started*** guides (linked above) to give you more of an ***understanding*** as to how you can ***customise*** your own version of the template.
+
+**Note**: Below are example Readme elements for the sample project. See **[```sample_notebook.ipynb```](./sample_notebook.ipynb)**.
 
 #### ```User Story```
 
-> The sample program is in the form of an ***interactive Python notebook***. See **[```sample_notebook.ipynb```](./sample_notebook.ipynb)**.
+> The sample program is in the form of an ***interactive Python notebook***. The ***data*** used in the notebook is a list of ***Seasons Best from the 2017/18 Swimming Season***.
 
-+ This script reads and parses CSV data from URL (via pandas),
+n+ This notebook reads and parses CSV data from URL (via pandas),
 + filters out athletes representing ```Australia```,
 + and displays the filtered dataframe.
-+ The Script then reads and parses in JSON data from URL (same data),
++ The notebook then reads and parses in JSON data from URL (same data),
 + filters out athletes representing ```Great Britain```,
 + and finally writes the filtered dataframe into two new files,
 + one with the data parsed as CSV, and the other parsed as JSON.
-
-**Note**: To **run** code in the sample notebook, ***recreate*** this project, or ***fork*** this repo. You can then **clone** your own ***fork** **locally (via CLI)** or **clone** it into a **Deepnote Project (via Git Services Tab)**. **Once cloned, follow the instructions below**. 
 
 #### ```Dependencies```
 
@@ -45,7 +45,9 @@ if test -f Pipfile
     sed -i '/jedi/d;/jupyter/d;' Pipfile
     pip install pipenv
     pipenv install
-  else echo "There's no Pipfile, so nothing to install. This is the case with most projects."
+  else
+    pip install pipenv
+    pipenv install
 fi
 ```
 
