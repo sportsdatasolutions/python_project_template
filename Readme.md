@@ -6,15 +6,15 @@
 
 > This setup guide inspired our [Python Project Template](https://github.com/sportsdatasolutions/python_project). If you are coming from there, have a read of our ***getting started*** guides (linked below) to give you more of an ***understanding*** as to how you can ***customise*** your own version of the template.
 
-#### 1. See our **[Getting Started Locally Guide](./getting_started_local.md)** to create your own ***Github Repo*** for ***Local Python Projects***. You can then setup your resulting Github Repo as a [Github Template](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-template-repository) for future projects!
+#### See our **[Getting Started Locally Guide](./getting_started_local.md)** 
+> To create your own ***Github Repo*** for ***Local Python Projects***. You can then setup your resulting Github Repo as a [Github Template](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-template-repository) for future projects!
 
-#### 2. See our **[Getting Started Deepnote Guide](./getting_started_deepnote.md)** to create your own ***Deepnote Project Template*** for ***Deepnote Projects***. Feel free to view this [Tutorial in Deepnote](https://deepnote.com/project/38ed87ae-207f-4a03-bfc1-5204106200d5), see ```.ipynb``` versions.
-
-> **Note**: Below are ***example*** Readme elements for the ***sample project***. See **[```sample_notebook.ipynb```](./sample_notebook.ipynb)**. This is ***not*** a part of the tutorial, simply here as a ***reference*** for how to set up ***Readmes*** for your future projects. To follow the **tutorial**, run through the **Getting Started Guides** above.
+#### See our **[Getting Started Deepnote Guide](./getting_started_deepnote.md)** 
+> To create your own ***Deepnote Project Template*** for ***Deepnote Projects***. Feel free to view this [Tutorial in Deepnote](https://deepnote.com/project/38ed87ae-207f-4a03-bfc1-5204106200d5), see ```.ipynb``` versions.
 
 #### ```Story - Sample Notebook```
 
-> The **[sample notebook](./sample_notebook.ipynb)** is in the form of an ***interactive Python notebook***. The ***data*** used in the notebook is a list of ***Season Bests from the 2017/18 Swimming Season***.
+> This section, and sections below are ***example*** **Readme** elements for the **[sample notebook](./sample_notebook.ipynb)**. This is ***not*** a part of the tutorial, simply here as a ***reference*** for how to set up ***Readmes*** for your future projects. To follow the **tutorials**, run through the **Getting Started Guides** above.
 
 + This notebook reads and parses CSV data from URL (via pandas),
 + filters out athletes representing ```Australia```,
