@@ -1,4 +1,4 @@
-## Python Project Setup
+## Python Project Setup (Local)
 > Best Practices for begining a Python Project Locally (so your projects work well in any virtual/local environment)
 
 ## Github  
@@ -25,7 +25,7 @@ $ git status
 ```
 
 ## Readme 
-> Below is a template for a good basic Readme. Please use it. Also see the [```Readme```](./Readme.md) to this project which is written off the template below. Even if you don't know the full extent of your project, it's good practise to set up a Readme template that you can easily **edit as you progress**.
+> Below is a template for a good basic Readme. Please use it. Also see the [Readme](./Readme.md) to this project which is written off the template below. Even if you don't know the full extent of your project, it's good practise to set up a Readme template that you can easily **edit as you progress**.
 
 ```markdown
 ## Project Title
@@ -117,8 +117,17 @@ $ pipenv install lxml
 $ pipenv run python test_script.py
 ```
 
-**Note**: Delete test script/notebook e.g. ```rm test_script.py``` and remove dependencies with ```pipenv uninstall``` e.g. ```pipenv uninstall lxml```.
+**Note**: Delete test script/notebook e.g. ```rm test_script.py``` and remove dependencies with ```pipenv uninstall``` e.g. ```pipenv uninstall lxml```. 
+
+## Set up your Project as a Github Template
+> Customise your Project (e.g. Readme, Contributing, Pipfile w/ Default Packages?). Push changes to your template to your Github Repo.
+
+##### 1. On Github, make your Project a [Github Template](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-template-repository).
+
+##### 2. Click the ```Use this template``` button to create a new project from your template!
+
+##### 3. Optionally, you can create branches on this template that will relate to different versions of your base template. E.g. you could have a branch called ```python_template_web_scraping``` that will have additional default packages within it's Pipfile that relate specifically to web scraping. Now when your start a new web scraping project, you could tick the ```Include all branches``` option so you can merge in the web scraping branch via Pull Request before beginning your project.
 
 ## 3rd Party Integrations
 
-> If your project will need some sort of 3rd party integration, e.g. Accessing files from AWS S3 bucket or a collection from a MongoDB cluster, we strongly reccommend testing these integrations before moving on with your project. Feel free to use the sample code in [```sample_notebook.ipynb```](./sample_notebook.ipynb).
+> If your project will need some sort of 3rd party integration, e.g. Accessing files from AWS S3 bucket or a collection from a MongoDB cluster, we strongly reccommend testing these integrations before moving on with your project. Feel free to use/copy the sample code in [```sample_notebook.ipynb```](./sample_notebook.ipynb) to include a sample notebook in your templates.
