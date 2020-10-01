@@ -144,41 +144,7 @@ len(dfs)
 ##### 2. You'll notice an error, if you scroll down, you'll see it's a missing package called ```lxml```. To install ```lxml``` via ```pipenv```, you can either open a project Terminal and use the CLI (Command Line):
 
 ```bash
-$ pipenv install lxml --skip
-```
-
-##### 2. Or, simply add ```lxml``` to the project's ```Pipfile``` and restart the **project machine (Environment Tab)**:
-
-```
-[packages]
-pandas = "*"
-lxml = "*"
-```
-
-##### 3. Restart the notebook and re-run the code cell.  If you get ***unexpected errors*** even after ***installing the new package***, ***restart*** the **project machine (Environment Tab)**.
-
-**Note**: Remove dependencies with ```pipenv uninstall``` e.g. ```pipenv uninstall lxml```.
-
-## Sample Python Program
-
-> Sample Project to Test Dependency Management. The script will use Pandas to fetch and parse HTML tables from Power10 website and output the number of tables found.
-
-##### 1. **Copy** code below into a code cell (create a notebook if you don't have one in your project yet) and ***Run*** the code cell.
-
-```python
-import pandas
-
-url = "https://www.thepowerof10.info/rankings/rankinglist.aspx?event=100&agegroup=ALL&sex=W&year=2020"
-
-dfs = pandas.read_html(url)
-
-len(dfs)
-```
-
-##### 2. You'll notice an error, if you scroll down, you'll see it's a missing package called ```lxml```. To install ```lxml``` via ```pipenv```, you can either open a project Terminal and use the CLI (Command Line):
-
-```bash
-$ pipenv install lxml --skip
+$ pipenv install lxml --skip-lock
 ```
 
 ##### 2. Or, simply add ```lxml``` to the project's ```Pipfile``` and restart the **project machine (Environment Tab)**:
