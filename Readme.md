@@ -1,16 +1,18 @@
-## Python Project Template
+## Python Project Templates (Tutorial)
 
 > Setup Template for Python Projects in [Deepnote](https://deepnote.com/) or Locally
 
 ### Getting Started
 
-> See [```getting_started_local```](./getting_started_local.md) and [```getting_started_deepnote```](./getting_started_deepnote.md). Feel free to view this in [Deepnote](https://deepnote.com/project/38ed87ae-207f-4a03-bfc1-5204106200d5), see ```.ipynb``` versions.
+> This setup guide inspired our [Python Project Template](https://github.com/sportsdatasolutions/python_project). If you are coming from there, have a read of our ***getting started*** guides (linked below) to give you more of an ***understanding*** as to how you can ***customise*** your own version of the template.
 
-This setup guide inspired our [Python Project Template](https://github.com/sportsdatasolutions/python_project). If you are coming from there, have a read of our ***getting started*** guides (linked above) to give you more of an ***understanding*** as to how you can ***customise*** your own version of the template.
+#### 1. See our **[Getting Started Locally Guide](./getting_started_local.md)** to create your own ***Github Template*** for ***Local Python Projects***. You can then setup your resulting project as a [Github Template](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-template-repository) for future projects.
 
-**Note**: Below are example Readme elements for the sample project. See **[```sample_notebook.ipynb```](./sample_notebook.ipynb)**.
+#### 2. See our **[Getting Started Deepnote Guide](./getting_started_deepnote.md)** to create your own ***Deepnote Project Template*** for ***Deepnote Projects***. Feel free to view this [Tutorial in Deepnote](https://deepnote.com/project/38ed87ae-207f-4a03-bfc1-5204106200d5), see ```.ipynb``` versions.
 
-#### ```User Story```
+**Note: Below are example Readme elements for the sample project. See **[```sample_notebook.ipynb```](./sample_notebook.ipynb)**. This is not a part of the tutorial, simply here as a reference for how to set up Readmes for your future projects.
+
+#### ```Story - Sample Notebook```
 
 > The sample program is in the form of an ***interactive Python notebook***. The ***data*** used in the notebook is a list of ***Seasons Best from the 2017/18 Swimming Season***.
 
@@ -28,7 +30,7 @@ This setup guide inspired our [Python Project Template](https://github.com/sport
 
 ```bash
 # Install pipenv (if not already)
-$ pip install pipenv
+$ pip install --user pipenv
 # Install packages with pipenv
 $ pipenv install jupyter pandas
 ```
@@ -44,10 +46,10 @@ if test -f Pipfile
   then
     sed -i '/jedi/d;/jupyter/d;' Pipfile
     pip install pipenv
-    pipenv install
+    pipenv install --skip-lock
   else
     pip install pipenv
-    pipenv install
+    pipenv install --skip-lock
 fi
 ```
 
