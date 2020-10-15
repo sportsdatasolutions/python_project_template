@@ -1,6 +1,4 @@
-## Python Project Templates (Tutorial)
-
-> Setup Template for Python Projects in [Deepnote](https://deepnote.com/) or Locally
+## Python Project Templates (Tutorial) [<img height="31" align="right" src="https://beta.deepnote.com/buttons/launch-in-deepnote-white.svg">](https://deepnote.com/project/38ed87ae-207f-4a03-bfc1-5204106200d5)
 
 ![deepnote](https://sportsdatasolutionsacademy.s3.eu-west-2.amazonaws.com/public/Links/deepnote.jpg)
 
@@ -12,9 +10,7 @@
 > To create your own ***Github Repo*** for ***Python Projects***. You can then setup your resulting Github Repo as a [Github Template](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-template-repository) for future projects!
 
 ### See our **[Getting Started Deepnote Guide](./getting_started_deepnote.md)** 
-> To create your own ***Deepnote Project Template*** for ***Deepnote Projects***. Launch this tutorial in Deepnote via the button below: 
-
-[<img height="31" align="left" src="https://beta.deepnote.com/buttons/launch-in-deepnote-white.svg">](https://deepnote.com/project/38ed87ae-207f-4a03-bfc1-5204106200d5)
+> To create your own ***Deepnote Project Template*** for ***Deepnote Projects***. Launch this tutorial in [Deepnote](https://deepnote.com/) via the button at [top](#python-project-templates-tutorial) of this Readme.
 
 ### ```Story - Sample Notebook```
 
