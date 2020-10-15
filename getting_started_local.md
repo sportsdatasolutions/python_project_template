@@ -32,23 +32,23 @@ $ git status
 
 > Sub-Heading (Small Description)
 
-### Getting Started
+## Getting Started
 
 > Place a more detailed description of your project, how it came about, inspiration, reading. 
 
-#### ```User Story```
+### ```Story```
 
 > User Story for your project. Decribe what you solutions does, in a brief step by step story.
 
-#### ```Dependencies```
+### ```Dependencies```
 
-> Instructions for installing project dependencies (packages the project will depend on), see this projects [Readme](./Readme.md) for a good template.
+> Instructions for installing project dependencies (packages the project will depend on).
 
-#### ```Running```
+### ```Running```
 
 > Instructions for running the solution.
 
-#### ```Contributing```
+## Contributing
 
 > Instructions for contributing to the project.
 ```
@@ -58,7 +58,7 @@ $ git status
 
 ###
 
-**Note**: We ***reccommend*** handling ***project dependencies*** via ```pipenv```. See [this guide](https://realpython.com/pipenv-guide/) for help on ```pipenv``` (if not familiar or installed) **Follow steps below to use ```pipenv``` to manage dependencies**.
+**Note**: We ***reccommend*** handling ***project dependencies*** via ```pipenv```. See [the docs](https://docs.pipenv.org/) for help on ```pipenv``` (if not familiar or installed) **Follow steps below to use ```pipenv``` to manage dependencies**.
 
 ##### 1. On CLI, install ```pipenv``` with ```pip``` (if not already installed)
 
@@ -82,9 +82,18 @@ Installing dependencies from Pipfile.lock (a6xxxx)…
 
 **Note**: You can now ***install*** all other possible packages you may need for your project via the **CLI** e.g. ```pipenv install jupyter pandas```.
 
-## Sample Python Program
+## Set up your Project as a Github Template
+> Customise your Project (e.g. Readme, Contributing, Pipfile w/ Default Packages?). Push changes to your template to your Github repo.
 
-> Sample Project to Test Dependency Management. Using Pandas to fetch and parse HTML tables from Power10 website and output the number of tables found.
+##### 1. On Github, make your Project a [Github Template](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-template-repository).
+
+##### 2. Optionally, you can create branches on this template that will relate to different versions of your base template. E.g. you could have a branch called ```python_template_web_scraping``` that will have additional default packages within it's Pipfile that relate specifically to web scraping. Now when your start a new web scraping project, you could tick the ```Include all branches``` option so you can merge in the web scraping branch via Pull Request before beginning your project.
+
+##### 3. Click the ```Use this template``` button to create a new project from your template, and try the Sample Python Project below!
+
+## Sample Python Project
+
+> Sample Project to Test your Template. Uses Pandas to fetch and parse HTML tables from Power10 website and output the number of tables found.
 
 ##### 1. As we know we're going to be using Jupyter and Pandas, so install them via ```pipenv```, if you haven't already: 
 
@@ -118,16 +127,3 @@ $ pipenv run python test_script.py
 ```
 
 **Note**: Delete test script/notebook e.g. ```rm test_script.py``` and remove dependencies with ```pipenv uninstall``` e.g. ```pipenv uninstall lxml```. 
-
-## Set up your Project as a Github Template
-> Customise your Project (e.g. Readme, Contributing, Pipfile w/ Default Packages?). Push changes to your template to your Github Repo.
-
-##### 1. On Github, make your Project a [Github Template](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-template-repository).
-
-##### 2. Click the ```Use this template``` button to create a new project from your template!
-
-##### 3. Optionally, you can create branches on this template that will relate to different versions of your base template. E.g. you could have a branch called ```python_template_web_scraping``` that will have additional default packages within it's Pipfile that relate specifically to web scraping. Now when your start a new web scraping project, you could tick the ```Include all branches``` option so you can merge in the web scraping branch via Pull Request before beginning your project.
-
-## 3rd Party Integrations
-
-> If your project will need some sort of 3rd party integration, e.g. Accessing files from AWS S3 bucket or a collection from a MongoDB cluster, we strongly reccommend testing these integrations before moving on with your project. Feel free to use/copy the sample code in [```sample_notebook.ipynb```](./sample_notebook.ipynb) to include a sample notebook in your templates.
