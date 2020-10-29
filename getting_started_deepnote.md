@@ -10,7 +10,7 @@
 
 #### 2. Create a **Deepnote Project** called ```python_project_template```. 
 
-#### 3. Join their **Communnity**!
+#### 3. Join their **Community**!
 
 + **Note** that you can access the **command palette** and various other **resources** via the **icons** on the **bottom left** of your project **sidebar** e.g. ***link to join their community***.
 
@@ -63,7 +63,7 @@ init.ipynb
 
 Handling Python project **dependencies** (packages, python version etc) locally is ***virtually*** the same on Deepnote. One difference is that Deepnote already has it's own dependencies pre-installed, meaning we don't have to install commonly used packages like ```pandas```. See [```init.ipynb```](./init.ipynb) for more info. 
 
-#### ```requirements.txt```
+### ```requirements.txt```
 
 It's good practice to track the dependencies of our projects ourselves via a ```requirements.txt``` file or ```Pipfile```. The [Documentation](https://docs.deepnote.com/environment/python-requirements) suggests using ```pip``` and a ```requirements.txt``` file e.g.
 
