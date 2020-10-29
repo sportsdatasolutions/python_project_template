@@ -10,9 +10,9 @@
 
 #### 2. Create a **Deepnote Project** called ```python_project_template```. 
 
-#### 3. Join their **Slack Channel**!
+#### 3. Join their **Communnity**!
 
-+ **Note** that you can access the **command palette** and various other **resources** via the **icons** on the **bottom left** of your project **sidebar** e.g. ***link to join their slack channel***.
++ **Note** that you can access the **command palette** and various other **resources** via the **icons** on the **bottom left** of your project **sidebar** e.g. ***link to join their community***.
 
 #### 4. To create a template that is Github friendly, we'll want to include some of ther usual repo suspects e.g. ***Gitignore***, ***Readme***, ***Contributing Guide*** (and ***LICENCE*** if applicable).
 
