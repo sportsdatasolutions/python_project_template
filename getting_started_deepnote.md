@@ -16,8 +16,10 @@
 
 #### 4. To create a template that is Github friendly, we'll want to include some of ther usual repo suspects e.g. ***Gitignore***, ***Readme***, ***Contributing Guide*** (and ***LICENCE*** if applicable).
 
-### Readme
-> Below is a template for a good basic Readme. Please use it. Also see the [```Readme```](./Readme.md) to this project which is written off the template below. Even if you don't know the full extent of your project, it's good practise to set up a Readme template that you can easily **edit as you progress**. If you are ***only*** going to be working on ***Deepnote***, we'd recommend creating a **```readme.ipynb```** or **```getting_started.ipynb```** as an ***alternative*** to what the ```Readme``` is for your Github projects.
+### ```Readme.md```
+> Below is a template for a good basic Readme. Please use it. 
+
+Also see the [```Readme```](./Readme.md) to this project which is written off the template below. Even if you don't know the full extent of your project, it's good practise to set up a Readme template that you can easily **edit as you progress**.
 
 ```markdown
 ## Project Title
@@ -47,10 +49,10 @@
 
 > If you want to provide some **contribution guidelines**, create a **```contributing.md```** file within the root of your project. Check out our **sample [```contributing.md```](./contributing.md)** file.
 
-### Gitignore
-> Ignoring ```.deepnote``` folder/files and ```init.ipynb``` file.
+### ```.gitignore```
+> Ignoring ```.deepnote``` folder/files and ```init.ipynb``` file with Gitignore file.
 
-We reccommend simply including [Github's Python Gitignore Template](https://github.com/github/gitignore/blob/master/Python.gitignore). If you want to be building your projects with the Deepnote project root as your actual project root (instead of within a folder), you'll have to add a couple folders/files within the Deepnote environment that we don't need version controlled.
+We reccommend simply including [Github's Python Gitignore Template](https://github.com/github/gitignore/blob/master/Python.gitignore). If you want to build your template with the deepnote project root as our actual project root, you'll have to add a couple files within our deepnote environment that we don't need version controlled.
 
 ```
 # Deepnote files
@@ -63,7 +65,7 @@ init.ipynb
 
 Handling Python project **dependencies** (packages, python version etc) locally is ***virtually*** the same on Deepnote. One difference is that Deepnote already has it's own dependencies pre-installed, meaning we don't have to install commonly used packages like ```pandas```. See [```init.ipynb```](./init.ipynb) for more info. 
 
-#### ```requirements.txt```
+### ```requirements.txt```
 
 It's good practice to track the ***dependencies*** of our projects via a ```requirements.txt``` file or ```Pipfile```. The [Documentation](https://docs.deepnote.com/environment/python-requirements) suggests using ```pip``` and a ```requirements.txt``` file so your project pacakages are loaded (via ```init.ipynb```) into your Deepnote project everytime you open it. You can also easily install and add packages to your projects on demand via your notebooks e.g.
 
