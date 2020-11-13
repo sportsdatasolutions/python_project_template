@@ -1,4 +1,4 @@
-## Python Project Setup (Deepnote)
+## Python Project Setup (Deepnote) [<img height="31" align="right" src="https://beta.deepnote.com/buttons/launch-in-deepnote-white.svg">](https://deepnote.com/project/38ed87ae-207f-4a03-bfc1-5204106200d5#%2Fgetting_started_deepnote.ipynb)
 > Best Practices for setting up a Python Project Template on Deepnote
 
 ![deepnote](https://sportsdatasolutionsacademy.s3.eu-west-2.amazonaws.com/public/Links/deepnote.jpg)
