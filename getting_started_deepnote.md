@@ -1,4 +1,4 @@
-## Python Project Setup (Deepnote) [<img height="31" align="right" src="https://beta.deepnote.com/buttons/launch-in-deepnote-white.svg">](https://deepnote.com/project/38ed87ae-207f-4a03-bfc1-5204106200d5#%2Fgetting_started_deepnote.ipynb)
+## Python Project Setup (Deepnote)
 > Best Practices for setting up a Python Project Template on Deepnote
 
 ![deepnote](https://sportsdatasolutionsacademy.s3.eu-west-2.amazonaws.com/public/Links/deepnote.jpg)
@@ -17,8 +17,7 @@
 #### 4. To create a template that is Github friendly, we'll want to include some of ther usual repo suspects e.g. ***Gitignore***, ***Readme***, ***Contributing Guide*** (and ***LICENCE*** if applicable).
 
 ### Readme
-
-Below is a template for a good basic Readme. Please use it. Also see the [```Readme```](./Readme.md) to this project which is written off the template below. Even if you don't know the full extent of your project, it's good practise to set up a Readme template that you can easily **edit as you progress**. If you are ***only*** going to be working on ***Deepnote***, we'd recommend creating a **```readme.ipynb```** or **```getting_started.ipynb```** as an ***alternative*** to what the ```Readme``` is for your Github projects.
+> Below is a template for a good basic Readme. Please use it. Also see the [```Readme```](./Readme.md) to this project which is written off the template below. Even if you don't know the full extent of your project, it's good practise to set up a Readme template that you can easily **edit as you progress**. If you are ***only*** going to be working on ***Deepnote***, we'd recommend creating a **```readme.ipynb```** or **```getting_started.ipynb```** as an ***alternative*** to what the ```Readme``` is for your Github projects.
 
 ```markdown
 ## Project Title
@@ -46,11 +45,12 @@ Below is a template for a good basic Readme. Please use it. Also see the [```Rea
 > Instructions for contributing to the project. See [contributing.md](./contributing.md)
 ```
 
-If you want to provide some **contribution guidelines**, create a **```contributing.md```** file within the root of your project. Check out our **sample [```contributing.md```](./contributing.md)** file.
+> If you want to provide some **contribution guidelines**, create a **```contributing.md```** file within the root of your project. Check out our **sample [```contributing.md```](./contributing.md)** file.
 
 ### Gitignore
+> Ignoring ```.deepnote``` folder/files and ```init.ipynb``` file.
 
-We reccommend simply including [Github's Python Gitignore Template](https://github.com/github/gitignore/blob/master/Python.gitignore). As we'll be building our template with the deepnote project root as our actual project root, we should add the ```.deepnote``` folder and the ```init.ipynb``` file to our template's ```.gitignore``` file e.g.
+We reccommend simply including [Github's Python Gitignore Template](https://github.com/github/gitignore/blob/master/Python.gitignore). If you want to be building your projects with the Deepnote project root as your actual project root (instead of within a folder), you'll have to add a couple folders/files within the Deepnote environment that we don't need version controlled.
 
 ```
 # Deepnote files
@@ -58,52 +58,20 @@ We reccommend simply including [Github's Python Gitignore Template](https://gith
 init.ipynb
 ```
 
-## Dependencies
+## Dependencies & Customisation
 > Dealing with project dependencies (packages the project will depend on)
 
 Handling Python project **dependencies** (packages, python version etc) locally is ***virtually*** the same on Deepnote. One difference is that Deepnote already has it's own dependencies pre-installed, meaning we don't have to install commonly used packages like ```pandas```. See [```init.ipynb```](./init.ipynb) for more info. 
 
-### ```requirements.txt```
+#### ```requirements.txt```
 
-It's good practice to track the dependencies of our projects ourselves via a ```requirements.txt``` file or ```Pipfile```. The [Documentation](https://docs.deepnote.com/environment/python-requirements) suggests using ```pip``` and a ```requirements.txt``` file e.g.
+It's good practice to track the ***dependencies*** of our projects via a ```requirements.txt``` file or ```Pipfile```. The [Documentation](https://docs.deepnote.com/environment/python-requirements) suggests using ```pip``` and a ```requirements.txt``` file so your project pacakages are loaded (via ```init.ipynb```) into your Deepnote project everytime you open it. You can also easily install and add packages to your projects on demand via your notebooks e.g.
 
 ![deepnotePip](https://mcusercontent.com/c977a94491aefa0b53bca6f72/images/798ac624-85a6-43c7-a7e7-1ce794be3924.gif)
 
-### ```Pipfile```
+### ```init.ipynb```
 
-We can alternatively use **```pipenv```** by replacing some code in ```init.ipynb``` to deal with ```pipenv``` and ```Pipfile``` instead of ```pip``` and ```requirements.txt``` e.g.
-
-```bash
-%%bash
-# If your project has a 'Pipfile' file, we'll install it here apart from blacklisted packages that interfere with Deepnote (see above).
-if test -f Pipfile
-  then
-    sed -i '/jedi/d;/jupyter/d;' Pipfile
-    pip install pipenv
-    pipenv install --skip-lock
-  else 
-    pip install pipenv
-    pipenv install --skip-lock
-fi
-```
-
-**Note**: We are using ```--skip-lock``` to tell ```pipenv``` not to create a ```Pipfile.lock```. This is because we are not building a long term project and don't want to increase project load times. We can change this on any subsequent projects we start from this template.
-
-## Customisation
-> Make the template feel and run like home by customising the projects environment.
-
-Read more about **custom environments**, the **```init.ipynb```** notebook, and the **```Dockerfile```** in the [documentation](https://docs.deepnote.com/environment/custom-environments).
-
-### ```Dockerfile```
-
-Installing dependencies via ```pip``` during your projects initialisation phase can increase the time it takes to load your projects after a restart. An alternative way of dealing with our environment dependencies in Deepnote is via the ```Dockerfile``` e.g. we can ***build*** an environment with ```chromium-driver``` pre-installed like so:
-
-```dockerfile
-FROM ..
-RUN sudo apt-get update
-RUN pip install chromium-driver -y
-```
-> Example of cusomisation via ```bash``` and ```init.ipynb```. Simply place the code block below into a new code cell within your projects ```init.ipynb```.
+Example of cusomisation via ```bash``` and ```init.ipynb``` (setting Git Aliasas for the Commmand Line). Simply place the code block below into a new code cell within your projects ```init.ipynb```.
 
 ```bash
 %%bash
@@ -113,6 +81,16 @@ git config --global alias.ci commit
 git config --global alias.co checkout
 git config --global alias.br branch
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+```
+### ```Dockerfile```
+> Read more about **custom environments** and the **Dockerfile** in the [documentation](https://docs.deepnote.com/environment/custom-environments).
+
+Installing dependencies via ```pip``` during your projects initialisation phase can increase the time it takes to load your projects after a restart. An alternative way of dealing with our environment dependencies in Deepnote is via the ```Dockerfile``` e.g. we can ***build*** an environment with ```chromium-driver``` pre-installed like so:
+
+```dockerfile
+FROM ..
+RUN sudo apt-get update
+RUN pip install chromium-driver -y
 ```
 
 ## Duplicating your Template Project
@@ -124,9 +102,9 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 
 #### 3. To get version controlling, create a new (empty) Github repo, copy it's ***ssh*** and link it via your new project's Github integration. **Move the ```.git``` folder** (and any additional files e.g. LICENCE) **into your project root** and **delete the cloned folder**.
 
-**Tip**: You can create additional Deepnote projects, based off this template, that will relate to different solutions. E.g. you could have a project template called ```Web Scraping Template``` that will have additional default packages or configurations that relate specifically to web scraping (e.g. ```nerodia```, ```lxml```, ```chromium-driver```).
+#### ***Tip:*** You can create additional Deepnote projects, based off this template, that will relate to different solutions. E.g. you could have a project template called ```Web Scraping Template``` that will have additional default packages or configurations that relate specifically to web scraping (e.g. ```nerodia```, ```lxml```, ```chromium-driver```).
 
-**Note**: See this [EPL Web Scraper](https://deepnote.com/project/19f51d7b-ae79-4c51-906c-dee0138da144) project as an example. If you want to test out your Template, try it with our sample Python Project below!
+#### ***Note:*** See this [EPL Web Scraper](https://deepnote.com/project/19f51d7b-ae79-4c51-906c-dee0138da144) project as an example. If you want to test out your Template, try it with our sample Python Project below!
 
 ## Sample Python Project
 
@@ -144,20 +122,12 @@ dfs = pandas.read_html(url)
 len(dfs)
 ```
 
-#### 2. Install the missing ```lxml``` pacakge. If using ```pipenv```, run the following in a cade cell and delete it once done:
+#### 2. Install the missing ```lxml``` pacakge e.g. run the following command in a code cell and follow prompts to delete the cell and add it to ```requirements.txt```:
 
 ```bash
-!pipenv install lxml --skip-lock
+!pip install lxml
 ```
 
-#### Or, simply add ```lxml``` to the project's ```Pipfile``` and run ```init.ipynb``` (or restart the machine):
-
-```
-[packages]
-pandas = "*"
-lxml = "*"
-```
-
-**Note**: Remove dependencies with ```pipenv uninstall``` or delete them from ```Pipfile```.
+**Note**: Remove dependencies with ```pip uninstall``` or delete them from ```requirements.txt```.
 
 #### 3. If you restart your notebook (once ```lxml``` has been installed), it should run smoothly and output a number 🎉 
