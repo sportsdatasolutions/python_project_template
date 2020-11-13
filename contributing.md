@@ -17,7 +17,7 @@ We use **Github** to host code, to track **Issues** and **Feature Requests**, as
 
 1. **Fork** this repository. As in click the fork button on the top-right hand side of this web page. You will now have a fork of this repo on your **own Github account**.
 
-2. Proceed to creating your **new branch** (not ```main``` or ```master```). Place an **indication** of ***what*** your **suggested change** is about e.g. ```hotfix``` (spelling mistakes etc) or ```feature``` (new suggestion/content/resources etc), and your ***initials** in the **branch name** e.g. ```hotfix/dsp```.
+2. Proceed to creating your **new branch** (not ```main``` or ```master```). Place an **indication** of ***what*** your **suggested change** is about e.g. ```hotfix``` (spelling mistakes etc) or ```feature``` (new suggestion/content/resources etc), and your ***initials*** in the **branch name** e.g. ```hotfix/dsp```.
 
 3. Create the **changes** (you can simply edit files on Github) and **commit** to your **new branch**.
 
